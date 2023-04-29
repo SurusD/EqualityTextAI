@@ -33,26 +33,26 @@ public class EqualityTextAI {
 				percent_of_confidence = 0;
 			}
 		} else {
-			int bigger = text.length();
-			int lower = text_to_compare.length();
+			int larger = text.length();
+			int smaller = text_to_compare.length();
 			int array = 0;
 			if (text.length() > text_to_compare.length()) {
-				bigger = text.length();
-				lower = text_to_compare.length();
+				larger = text.length();
+				smaller = text_to_compare.length();
 				array = 1;
 			} else {
 				if (text_to_compare.length() > text.length()) {
-					bigger = text_to_compare.length();
-					lower = text.length();
+					larger = text_to_compare.length();
+					smaller = text.length();
 					array = 0;
 				} else {
-					bigger = text.length();
-					lower = text_to_compare.length();
+					larger = text.length();
+					smaller = text_to_compare.length();
 					array = 1;
 				}
 			}
-			for (int i = 0; i < bigger; i++) {
-				if (i >= lower) {
+			for (int i = 0; i < larger; i++) {
+				if (i >= smaller) {
 					if (array == 1) {
 						not_same_chars.add(text.charAt(i));
 					} else {
@@ -68,7 +68,7 @@ public class EqualityTextAI {
 					}
 				}
 			}
-			percent_of_confidence = same_chars.size() <= 0 ? 0 : (same_chars.size() * 100) / bigger;
+			percent_of_confidence = same_chars.size() <= 0 ? 0 : (same_chars.size() * 100) / larger;
 			history_of_percent_of_confidence.add(percent_of_confidence);
 			toString += "\nPercent of confidence: " + String.valueOf(percent_of_confidence) + "%";
 		}
