@@ -1,4 +1,4 @@
-package org.surus.lang.ai;
+package org.surus.ai;
 
 import java.util.ArrayList;
 import java.util.Arrays;
