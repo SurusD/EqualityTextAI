@@ -1,5 +1,5 @@
 # EqualityTextAI
-"Artificial Intelligence" that can understand how much one text is equal to another
+"Artificial Intelligence" that can understand how much percent one text is equal to another
 ```Java
  EqualityTextAI ai = new EqualityTextAI("Hello", "Hepolo");
  int percent_of_confidence1 = ai.percent_of_confidence; //The percentage by which artificial intelligence thinks that these texts are equal
